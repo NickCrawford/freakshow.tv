@@ -28,6 +28,7 @@
 
       #twitch-embed {
         display: flex;
+
         flex-direction: row-reverse;
         width: 100vw;
         height: 100vh;
@@ -35,14 +36,32 @@
       #twitch-embed iframe:not(#chat_embed)
        {
          flex-grow: 5;
-
          height: 100vh;
+
        }
 
       #chat_embed {
         flex-grow: 1;
         min-width: 300px;
         height: 100%;
+
+
+
+        border: none;
+      }
+
+      @media screen and (orientation: portrait) {
+        #twitch-embed {
+          display: flex;
+          justify-content: stretch;
+          flex-direction: column-reverse;
+
+        }
+
+        #chat_embed {
+        flex-grow: 1;
+        width: 100%;
+      }
       }
     </style>
   </head>
