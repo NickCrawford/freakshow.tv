@@ -34,11 +34,14 @@
       }
       #twitch-embed iframe:not(#chat_embed)
        {
-        width: 100%;
+         flex-grow: 5;
+
          height: 100vh;
        }
 
       #chat_embed {
+        flex-grow: 1;
+        min-width: 300px;
         height: 100%;
       }
     </style>
